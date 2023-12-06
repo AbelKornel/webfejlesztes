@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ábel Kornél Péter">
+    <meta name="copyright" content="DayZ Expository">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/dayz.ico">
+    <title>DayZ Expository - Beadandó</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#survey_form").validate({
+                rules: {
+                    name: "required",
+                    gender: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    birthdate: "required",
+
+                },
+
+                messages: {
+                    name: "Please type in your name!",
+                    email: "Please type in a real email address!",
+                    birthdate: "Please type in your birthday!",
+                    gender: "Please select your gender!"
+                }
+            });
+        });
+
+
+        $(document).ready(function () {
+            $(".next").click(function () {
+                $(".form").hide(2000);
+                $(".survey").show(2000);
+                $(".next").hide(2000);
+                $("resetbtn").hide(2000);
+                $(".submitbtn").show(3200);
+                $(".resetbtn2").show(3200);
+                $(".back").show(3200);
+            });
+
+            $(".back").click(function () {
+                $(".form").show(2000);
+                $(".survey").hide(2000);
+                $(".next").show(2000);
+                $(".submitbtn").hide(2000);
+                $("resetbtn").show(2000);
+                $(".resetbtn2").hide(2000);
+                $(".back").hide(2000);
+            });
+
+            $("input[name='essential']").change(function () {
+                let count = $("input[name='essential']:checked").length;
+                if (count > 3) {
+                    $(this).prop("checked", "");
+                    alert('Select maximum ' + 3 + ' essentials!');
+                }
+            });
+
+            $("input[name='caliber']").change(function () {
+                let count = $("input[name='caliber']:checked").length;
+                if (count > 2) {
+                    $(this).prop("checked", "");
+                    alert('Select maximum ' + 2 + ' calibers!');
+                }
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">DayZ</h1>
+        Thank you for taking a look at our surveys!
+    </header>
+
+    <div class="container">
+        <nav id="background">
+            <ul class="nav-links">
+                <li><a href="index.html" class="d1">Home</a></li>
+                <li><a href="content.html" class="d2">DayZ Content</a></li>
+                <li><a href="maps.html" class="d1">Maps</a></li>
+                <li><a href="weapons.html" class="d2">Weapons</a></li>
+                <li><a href="dmg.html" class="d1">Calculate Damage</a></li>
+                <li><a id="current" href="#" class="d2">Surveys</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">
+        <p>
+            DayZ Survey
+        </p>
+    </div>
+
+    <form action="http://szamtud.uni-corvinus.hu/receive.php" method="post" novalidate="novalidate" id="survey_form">
+        <div class="container">
+
+            <article class="survey">
+
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="John Doe"><br>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.hu"><br>
+                    <label for="birthdate">Birth date:</label>
+                    <input type="date" name="birthdate" id="birthdate"><br>
+                    <label>Please select your gender: </label><br>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" name="gender" id="other" value="Other">
+                    <label for="other">Other</label>
+                </div>
+
+                <button type="reset" class="resetbtn2">Reset</button>
+                <button type="submit" class="submitbtn">Submit</button>
+                <button type="button" class="back">Back</button>
+
+            </article>
+        </div>
+
+        <div class="container">
+            <article class="form">
+                <label class="question">Which type of weapon do you prefer?</label>
+                <div class="category">
+                    <input type="radio" id="AR" name="prefer" value="AR">
+                    <label for="AR">Assault Rifle</label><br>
+                    <input type="radio" id="SR" name="prefer" value="SR">
+                    <label for="SR">Sniper Rifle</label><br>
+                    <input type="radio" id="Shotgun" name="prefer" value="Shotgun">
+                    <label for="Shotgun">Shotgun</label><br>
+                    <input type="radio" id="Pistol" name="prefer" value="Pistol">
+                    <label for="Pistol">Pistol</label><br>
+                </div>
+
+                <label class="question">What's your preferred playstyle in DayZ?</label>
+                <div class="category">
+                    <input type="radio" id="Silent&Sneaky" name="playstyle" value="Silent&Sneaky">
+                    <label for="Silent&Sneaky">Silent and Sneaky</label><br>
+                    <input type="radio" id="Betrayal" name="playstyle" value="Betrayal">
+                    <label for="Betrayal">Betrayal</label><br>
+                    <input type="radio" id="Rush" name="playstyle" value="Rush">
+                    <label for="Rush">Rushing in</label><br>
+                    <input type="radio" id="PVP" name="playstyle" value="PVP">
+                    <label for="PVP">Only PVP</label><br>
+                    <input type="radio" id="survive" name="playstyle" value="Does everything to survive">
+                    <label for="survive">Does everything to survive</label><br>
+                    <input type="radio" id="BaseBuilder" name="playstyle" value="BaseBuilder">
+                    <label for="BaseBuilder">Base Builder</label><br>
+                </div>
+
+                <label class="question" for="location">What's your favourite location to loot?</label>
+                <div class="category">
+                    <input type="text" id="location" name="location" placeholder="Tisy, NWAF, etc...">
+                </div>
+
+                <label class="question" for="moment">What was your most memorable moment playing the game?</label>
+                <div class="category">
+                    <input type="text" id="moment" name="moment">
+                </div>
+
+                <label class="question" for="whichmap">Which map do you prefer to play on in DayZ?</label>
+                <div class="category">
+                    <input type="text" name="whichmap" id="whichmap" list="mymaps">
+                    <datalist id="mymaps">
+                        <option value="Chernarus"></option>
+                        <option value="Livonia"></option>
+                        <option value="Namalsk"></option>
+                        <option value="Deer Isle"></option>
+                        <option value="Takistan"></option>
+                        <option value="Esseker"></option>
+                    </datalist>
+                </div>
+
+                <label class="question" for="long">How long have you been playing DayZ?</label>
+                <div class="category">
+                    <input type="date" name="long" id="long">
+                </div>
+
+                <label class="question" for="hours">How many hours do you have in the game?</label>
+                <div class="category">
+                    <input type="number" name="hours" id="hours">
+                </div>
+
+                <label class="question">Which items do you consider essential for survival in DayZ? (You can select
+                    up to 3)</label>
+                <div class="category">
+                    <input type="checkbox" id="food" name="essential" value="food">
+                    <label for="food">Food</label><br>
+                    <input type="checkbox" id="water" name="essential" value="water">
+                    <label for="water">Water</label><br>
+                    <input type="checkbox" id="medical" name="essential" value="medical">
+                    <label for="medical">Medical Supplies</label><br>
+                    <input type="checkbox" id="tools" name="essential" value="tools">
+                    <label for="tools">Base building tools</label><br>
+                    <input type="checkbox" id="guns" name="essential" value="guns">
+                    <label for="guns">Weapons</label><br>
+                    <input type="checkbox" id="ammo" name="essential" value="ammo">
+                    <label for="ammo">Ammunition</label><br>
+                    <input type="checkbox" id="clothes" name="essential" value="clothes">
+                    <label for="clothes">Warm Clothes</label><br>
+                </div>
+
+                <label class="question">What caliber would you like to see implemented? (You can select up
+                    to 2)</label>
+                <div class="category">
+                    <input type="checkbox" id="10mm" name="caliber" value="10mm">
+                    <label for="10mm">10mm</label><br>
+                    <input type="checkbox" id="38" name="caliber" value="38">
+                    <label for="38">.38 Special</label><br>
+                    <input type="checkbox" id="40" name="caliber" value="40">
+                    <label for="40">.40 S&W</label><br>
+                    <input type="checkbox" id="3006" name="caliber" value="3006">
+                    <label for="3006">.30-06 Springfield</label><br>
+                    <input type="checkbox" id="76251" name="caliber" value="76251">
+                    <label for="76251">7.62x51mm NATO</label><br>
+                    <input type="checkbox" id="50BMG" name="caliber" value="50BMG">
+                    <label for="50BMG">.50 BMG</label><br>
+                    <input type="checkbox" id="57" name="caliber" value="russian50">
+                    <label for="57">14.5x114mm</label><br>
+                </div>
+
+                <div>
+                    <button type="reset" class="resetbtn">Reset</button>
+                    <button type="button" class="next">Next</button>
+                </div>
+
+            </article>
+        </div>
+    </form>
+    <footer>
+        <p>
+            Not an official website of DayZ<br>
+            © 2023 BOHEMIA INTERACTIVE a.s. DAYZ ® and BOHEMIA INTERACTIVE® are registered trademarks of BOHEMIA
+            INTERACTIVE
+            a.s. All rights reserved. All other trademarks and copyrights are the property of their respective
+            owners.<br><br>
+            For educational purposes only<br>
+            © Abel Kornel Peter 2023 Corvinus<br>
+        </p>
+    </footer>
+</body>
+
+</html>

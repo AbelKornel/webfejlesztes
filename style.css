@@ -1,0 +1,411 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: dayzfont;
+    src: url(28dayslater.ttf);
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-family: dayzfont;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 10px;
+    font-family: dayzfont;
+}
+
+nav{
+    flex: 1 1 100%;
+}
+
+article{
+    flex: 1 1 100%;
+}
+
+.nav-links {
+    font-variant: small-caps;
+    font-weight: 800;
+    font-size: 30px;
+    font-family: dayzfont;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links li {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    background-color: beige;
+    border-radius: 10px;
+    flex-basis: 80%;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+a:hover{
+    background-color: burlywood;
+}
+
+nav li a#current{
+    background-color: burlywood;
+}
+
+table{
+    flex-basis: 100%;
+}
+
+.vid_div {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.description{
+    padding: 2% 15% 2% 15%;
+    text-align: justify;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.description2{
+    padding: 5% 15% 2% 15%;
+    justify-content: center;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.description_content{
+    padding: 2% 10% 2% 10%;
+    text-align: justify;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.description p{
+    font-size: 18px;
+}
+
+.title{
+    font-family: dayzfont;
+    font-size: 80px;
+    text-align: center;
+}
+
+.title2{
+    font-family: dayzfont;
+    font-size: 80px;
+    padding: 30px;
+    text-align: center;
+}
+
+.inf_title{
+    font-family: dayzfont;
+    font-size: 35px;
+    text-align: center;
+}
+
+.desc_title{
+    font-family: dayzfont;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#background{
+    background-image: url("Images/background_dayz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 25%;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.img_content{
+    width: 175%;
+}
+
+video{
+    height: auto;
+    margin-bottom: 45px;
+    margin-top: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+#almenu1, #almenu2, #almenu3{
+    background-color: burlywood;
+}
+
+#almenu1:hover, #almenu2:hover, #almenu3:hover{
+    background-color: gray;
+}
+
+.dwnld{
+    text-align: center;
+    padding-right: 10px;
+}
+
+  
+.btn:hover {
+    background-color: gray;
+}
+
+figcaption{
+    text-align: center;
+    font-family: dayzfont;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.map_title{
+    text-align: center;
+    font-family: dayzfont;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 25px;
+}
+
+.form_dmg{
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 275px;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+}
+
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    width: 225px;
+    background-color: burlywood;
+    color: black;
+    font-family: dayzfont;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+#currentMeterValue {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.category {
+    margin-bottom: 15px;
+}
+
+.results{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.galleria {
+    max-width: 90%;
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+}
+
+.gallery_title{
+    padding: 20px;
+    font-family: dayzfont;
+    font-size: 35px;
+    text-align: center;
+}
+
+.question{
+    font-size: 24px;
+}
+
+.survey{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 275px;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+}
+
+.submitbtn, .resetbtn2, .back{
+    display: none;
+}
+
+label.error {
+    font-size: 15px;
+    color: red;
+}
+
+
+/* Reszponzivitas */
+
+
+@media all and (min-width: 600px){
+    nav{
+        flex-basis: 60%;
+    }
+
+    .nav-links a{
+        flex-basis: 38%;
+    }
+
+    figure{
+        flex-basis: 80%;
+    }
+
+    table{
+        flex-basis: 85%
+    }
+
+    .nav-links{
+        font-size: 40px;
+    }
+
+    .img_content{
+        width: 140%;
+    }
+}
+
+@media all and (min-width: 768px){
+    nav{
+        flex-basis: 38%;
+    }
+
+    .nav-links a{
+        flex-basis: 38%;
+    }
+
+    figure{
+        flex-basis: 40%;
+    }
+
+    table{
+        flex-basis: 70%
+    }
+
+    .nav-links{
+        font-size: 40px;
+    }
+
+    .img_content{
+        width: 120%;
+    }
+
+    img{
+        width: 40%;
+    }
+
+    .description p, .description_content p{
+        font-size: 22px;
+    }
+
+    .form {
+        min-width: 500px;
+    }
+}
+
+/* Animaciok */
+
+
+.d1{
+    animation: from_right_to_left 3s ease;
+}
+
+.d2{
+    animation: from_left_to_right 3s ease;
+}
+
+@keyframes from_right_to_left {
+    from {
+      margin-left: 80%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+  
+  @keyframes from_left_to_right {
+    from {
+      margin-left: -80%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }

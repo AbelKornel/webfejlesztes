@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ábel Kornél Péter">
+    <meta name="copyright" content="DayZ Expository">
+    <link rel="stylesheet" href="style.css">
+    <script src="damage.js"></script>
+    <link rel="icon" type="image/x-icon" href="Images/dayz.ico">
+    <title>DayZ Expository - Beadandó</title>
+</head>
+
+<body onload="distance()">
+    <header>
+        <h1 class="title">DayZ</h1>
+        How many hits do you need to land for a confirmed kill?
+    </header>
+
+    <div class="container">
+        <nav id="background">
+            <ul class="nav-links">
+                <li><a href="index.html" class="d1">Home</a></li>
+                <li><a href="content.html" class="d2">DayZ Content</a></li>
+                <li><a href="maps.html" class="d1">Maps</a></li>
+                <li><a href="weapons.html" class="d2">Weapons</a></li>
+                <li><a id="current" href="#" class="d1">Calculate Damage</a></li>
+                <li><a href="survey.html" class="d2">Surveys</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="description2">
+        <p>
+            Choose a weapon and a distance in order to see how many shots you would need to land on an unarmoured enemy
+            to make sure you get a kill!
+        </p>
+    </div>
+
+    <div class="container">
+        <article class="form_dmg">
+            <form>
+                <div class="category">
+                    <label>Pistols:</label>
+                    <div id="pistols">
+                        <input type="radio" id="CR-75" name="weapon" value="CR-75">
+                        <label for="CR-75">CR-75</label>
+                        <input type="radio" id="Deagle" name="weapon" value="Deagle">
+                        <label for="Deagle">Deagle</label>
+                        <input type="radio" id="Kolt1911" name="weapon" value="Kolt1911">
+                        <label for="Kolt1911">Kolt 1911</label><br>
+                        <input type="radio" id="Mlock-91" name="weapon" value="Mlock-91">
+                        <label for="Mlock-91">Mlock-91</label>
+                        <input type="radio" id="Revolver" name="weapon" value="Revolver">
+                        <label for="Revolver">Revolver</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label>Submachine guns:</label>
+                    <div id="smgs">
+                        <input type="radio" id="Bizon" name="weapon" value="Bizon">
+                        <label for="Bizon">Bizon</label>
+                        <input type="radio" id="CR-61Scorpion" name="weapon" value="CR-61Scorpion">
+                        <label for="CR-61Scorpion">CR-61 Scorpion</label><br>
+                        <input type="radio" id="SG5-K" name="weapon" value="SG5-K">
+                        <label for="SG5-K">SG5-K</label>
+                        <input type="radio" id="USG-45" name="weapon" value="USG-45">
+                        <label for="USG-45">USG-45</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label>Shotguns:</label>
+                    <div id="shotguns">
+                        <input type="radio" id="BK-133" name="weapon" value="BK-133">
+                        <label for="BK-133">BK-133</label>
+                        <input type="radio" id="Vaiga" name="weapon" value="Vaiga">
+                        <label for="Vaiga">Vaiga</label>
+
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label>Rifles:</label>
+                    <div id="rifles">
+                        <input type="radio" id="Repeater" name="weapon" value="Repeater">
+                        <label for="Repeater">Repeater</label>
+                        <input type="radio" id="SK5966" name="weapon" value="SK5966">
+                        <label for="SK5966">SK 5966</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label>Assault rifles:</label>
+                    <div id="assault_rifles">
+                        <input type="radio" id="ASVAL" name="weapon" value="ASVAL">
+                        <label for="ASVAL">AS VAL</label>
+                        <input type="radio" id="AURAX" name="weapon" value="AURAX">
+                        <label for="AURAX">AUR AX</label><br>
+                        <input type="radio" id="KA-M" name="weapon" value="KA-M">
+                        <label for="KA-M">KA-M</label>
+                        <input type="radio" id="KA-74" name="weapon" value="KA-74">
+                        <label for="KA-74">KA-74</label><br>
+                        <input type="radio" id="LAR" name="weapon" value="LAR">
+                        <label for="LAR">LAR</label>
+                        <input type="radio" id="M4A1" name="weapon" value="M4A1">
+                        <label for="M4A1">M4A1</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label>Sniper Rifles:</label>
+                    <div id="sniper_rifles">
+                        <input type="radio" id="Mosin9130" name="weapon" value="Mosin9130">
+                        <label for="Mosin9130">Mosin 9130</label>
+                        <input type="radio" id="M-70Tundra" name="weapon" value="M-70Tundra">
+                        <label for="M-70Tundra">M-70 Tundra</label><br>
+                        <input type="radio" id="Blaze" name="weapon" value="Blaze">
+                        <label for="Blaze">Blaze</label>
+                        <input type="radio" id="VSD" name="weapon" value="VSD">
+                        <label for="VSD">VSD</label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <label for="distance">Set firing distance (0-1100 meters):</label>
+                    <input type="range" id="distance" name="distance" min="0" max="1100" value="0" step="10">
+                    <p id="currentMeterValue">0 meters</p>
+                </div>
+
+                <button type="button" onclick="hits()">Fire Weapon</button>
+
+            </form>
+        </article>
+    </div>
+    <div id="results_text" class="results">
+
+    </div>
+    <footer>
+        <p>
+            Not an official website of DayZ<br>
+            © 2023 BOHEMIA INTERACTIVE a.s. DAYZ ® and BOHEMIA INTERACTIVE® are registered trademarks of BOHEMIA INTERACTIVE
+            a.s. All rights reserved. All other trademarks and copyrights are the property of their respective
+            owners.<br><br>
+            For educational purposes only<br>
+            © Abel Kornel Peter 2023 Corvinus<br>
+        </p>
+    </footer>
+</body>
+
+</html>

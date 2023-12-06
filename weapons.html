@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ábel Kornél Péter">
+    <meta name="copyright" content="DayZ Expository">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/dayz.ico">
+    <title>DayZ Expository - Beadandó</title>
+    <script src="DayZWeapons/jquery-3.7.1.min.js"></script>
+    <script src="DayZWeapons/galleria/dist/galleria.min.js"></script>
+    <script src="DayZWeapons/galleria/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Handguns').galleria(
+                width = 1200,
+                height = 500
+            );
+            $('#SMG').galleria(
+                width = 1200,
+                height = 500
+            );
+
+            $('#Shotgun').galleria(
+                width = 1200,
+                height = 500
+            );
+
+            $('#Rifle').galleria(
+                width = 1200,
+                height = 500
+            );
+
+            $('#Assault_Rifle').galleria(
+                width = 1200,
+                height = 500
+            );
+
+            $('#Sniper_Rifle').galleria(
+                width = 1200,
+                height = 500
+            );
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">DayZ</h1>
+        All of DayZ's available weapons in one place!
+    </header>
+
+    <div class="container">
+        <nav id="background">
+            <ul class="nav-links">
+                <li><a href="index.html" class="d1">Home</a></li>
+                <li><a href="content.html" class="d2">DayZ Content</a></li>
+                <li><a href="maps.html" class="d1">Maps</a></li>
+                <li><a id="current" href="#" class="d2">Weapons</a></li>
+                <li><a href="dmg.html" class="d1">Calculate Damage</a></li>
+                <li><a href="survey.html" class="d2">Surveys</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="title2">Weapons</h1>
+    <p><br></p>
+    <h2 class="gallery_title">Handguns</h2>
+    <article id="Handguns" class="galleria">
+        <img src="DayZWeapons/Pistols/CZ-75.png" alt="CR-75" title="CR-75">
+        <img src="DayZWeapons/Pistols/Deagle.png" alt="Deagle" title="Deagle">
+        <img src="DayZWeapons/Pistols/Derringer_Black.png" alt="Derringer" title="Derringer">
+        <img src="DayZWeapons/Pistols/FNX45.png" alt="FX-45" title="FX-45">
+        <img src="DayZWeapons/Pistols/Glock19.png" alt="Glock19" title="Glock19">
+        <img src="DayZWeapons/Pistols/IJ70.png" alt="IJ70" title="IJ70">
+        <img src="DayZWeapons/Pistols/Engraved1911.png" alt="Kolt1911" title="Kolt1911">
+        <img src="DayZWeapons/Pistols/Longhorn.png" alt="Longhorn" title="Longhorn">
+        <img src="DayZWeapons/Pistols/MKII.png" alt="MKII" title="MKII">
+        <img src="DayZWeapons/Pistols/P1.png" alt="P1" title="P1">
+        <img src="DayZWeapons/Pistols/Revolver.png" alt="Revolver" title="Revolver">
+    </article>
+    <p><br></p>
+    <h2 class="gallery_title">Submachine Guns</h2>
+    <article id="SMG" class="galleria">
+        <img src="DayZWeapons/SubmachineGuns/Bizon.png" alt="Bizon" title="Bizon">
+        <img src="DayZWeapons/SubmachineGuns/MP5-K.png" alt="SG5-K" title="SG5-K">
+        <img src="DayZWeapons/SubmachineGuns/Scorpion.png" alt="Scorpion" title="Scorpion">
+        <img src="DayZWeapons/SubmachineGuns/UMP45.png" alt="UMP45" title="UMP45">
+    </article>
+    <p><br></p>
+    <h2 class="gallery_title">Shotguns</h2>
+    <article id="Shotgun" class="galleria">
+        <img src="DayZWeapons/Shotguns/BK12.png" alt="BK12" title="BK12">
+        <img src="DayZWeapons/Shotguns/BK133.png" alt="BK133" title="BK133">
+        <img src="DayZWeapons/Shotguns/BK43.png" alt="BK43" title="BK43">
+        <img src="DayZWeapons/Shotguns/Vaiga.png" alt="Vaiga" title="Vaiga">
+    </article>
+    <p><br></p>
+    <h2 class="gallery_title">Rifles</h2>
+    <article id="Rifle" class="galleria">
+        <img src="DayZWeapons/Rifles/BK18.png" alt="BK18" title="BK18">
+        <img src="DayZWeapons/Rifles/Repeater.png" alt="Repeater" title="Repeater">
+        <img src="DayZWeapons/Rifles/SKS.png" alt="SKS" title="SKS">
+        <img src="DayZWeapons/Rifles/Sporter_22.png" alt="Sporter_22" title="Sporter_22">
+    </article>
+    <p><br></p>
+    <h2 class="gallery_title">Assault Rifles</h2>
+    <article id="Assault_Rifle" class="galleria">
+        <img src="DayZWeapons/AssaultRifles/M4A1.png" alt="M4A1" title="M4A1">
+        <img src="DayZWeapons/AssaultRifles/M16-A2.png" alt="M16-A2" title="M16-A2">
+        <img src="DayZWeapons/AssaultRifles/AK101.png" alt="AK101" title="AK101">
+        <img src="DayZWeapons/AssaultRifles/AK74.png" alt="AK74" title="AK74">
+        <img src="DayZWeapons/AssaultRifles/AKM.png" alt="AKM" title="AKM">
+        <img src="DayZWeapons/AssaultRifles/KAS74U.png" alt="KAS74U" title="KAS74U">
+        <img src="DayZWeapons/AssaultRifles/LAR.png" alt="LAR" title="LAR">
+        <img src="DayZWeapons/AssaultRifles/AUGAX.png" alt="AUGAX" title="AUGAX">
+        <img src="DayZWeapons/AssaultRifles/AUGA1.png" alt="AUGA1" title="AUGA1">
+        <img src="DayZWeapons/AssaultRifles/FAMAS.png" alt="LE-MAS" title="LE-MAS">
+        <img src="DayZWeapons/AssaultRifles/ASVAL.png" alt="ASVAL" title="ASVAL">
+    </article>
+    <p><br></p>
+    <h2 class="gallery_title">Sniper Rifles</h2>
+    <article id="Sniper_Rifle" class="galleria">
+        <img src="DayZWeapons/SniperRifles/SVD.png" alt="SVD" title="SVD">
+        <img src="DayZWeapons/SniperRifles/DMR.png" alt="DMR" title="DMR">
+        <img src="DayZWeapons/SniperRifles/Mosin9130.png" alt="Mosin9130" title="Mosin9130">
+        <img src="DayZWeapons/SniperRifles/Winchester70.png" alt="M-70Tundra" title="M-70Tundra">
+        <img src="DayZWeapons/SniperRifles/Blaze.png" alt="Blaze" title="Blaze">
+        <img src="DayZWeapons/SniperRifles/VSS.png" alt="VSS" title="VSS">
+        <img src="DayZWeapons/SniperRifles/Pioneer.png" alt="Pioneer" title="Pioneer">
+        <img src="DayZWeapons/SniperRifles/SSG82.png" alt="SSG82" title="SSG82">
+        <img src="DayZWeapons/SniperRifles/CR527.png" alt="CR527" title="CR527">
+    </article>
+
+    <footer>
+        <p>
+            Not an official website of DayZ<br>
+            © 2023 BOHEMIA INTERACTIVE a.s. DAYZ ® and BOHEMIA INTERACTIVE® are registered trademarks of BOHEMIA INTERACTIVE
+            a.s. All rights reserved. All other trademarks and copyrights are the property of their respective
+            owners.<br><br>
+            For educational purposes only<br>
+            © Abel Kornel Peter 2023 Corvinus<br>
+        </p>
+    </footer>
+</body>
+
+</html>
