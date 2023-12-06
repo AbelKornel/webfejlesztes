@@ -2,7 +2,7 @@
 
 Ábel Kornél Péter
 
-
+https://abelkornel.github.io/webfejlesztes/
 
 A weboldalam témája a DayZ nevű apokalipszis-túlélő videójáték. Tartalmaz ismertetőt a játékról és tartalmairól, valamint több tartalomgyártót akik a játékról csinálnak videókat, livestreameket.
 
